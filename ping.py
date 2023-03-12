@@ -6,7 +6,8 @@ import ipaddress
 #Ask for user network/input
 #input(str("Enter ip and prefix:"))
 
-network = ipaddress.ip_network('127.0.0.0/24')
+usr_network = input('Enter your ipaddress and prefix:')
+network = ipaddress.ip_network(usr_network)
 
 for addr in network.hosts():
     ping(str(addr), verbose=True)
